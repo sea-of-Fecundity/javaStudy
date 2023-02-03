@@ -17,9 +17,7 @@ public class App {
 //        Spliterator<String> stringSpliterator = spliterator.trySplit();
 //        while (spliterator.tryAdvance(System.out::println));
 //        System.out.println("========");
-//        while (stringSpliterator.tryAdvance(System.out::println));
-
-        
+//        while (stringSpliterator.tryAdvance(System.out::println)
 
     }
 }

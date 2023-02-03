@@ -1,6 +1,5 @@
-package com.example.javastudy.CompletableFuture;
+package com.example.javastudy.completablefuture;
 
-import com.example.javastudy.completablefuture.App;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
