@@ -16,9 +16,18 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-	compileOnly 'org.projectlombok:lombok'
+	implementation'org.springframework.boot:spring-boot-starter-web:2.7.5'
+
+	implementation 'org.ifinal.auto:auto-service:1.0.0'
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'org.testng:testng:7.1.0'
+
+    compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.projectlombok:lombok:1.18.22'
+
+	testCompileOnly 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
+
 }
 
 tasks.named('test') {

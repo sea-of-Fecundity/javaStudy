@@ -13,7 +13,7 @@ public class UncheckedException {
         try {
             controller.serviceCall();
         } catch (Exception e) {
-            e.printStackTrace();
+            log.info("exception", e );
         }
         Assertions.assertThatThrownBy(()->controller.serviceCall()).isInstanceOf(MyUncheckedException.class);
     }

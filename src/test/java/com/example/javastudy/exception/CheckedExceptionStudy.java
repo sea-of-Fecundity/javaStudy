@@ -2,8 +2,6 @@ package com.example.javastudy.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-import java.io.IOException;
-
 
 @Slf4j
 public class CheckedExceptionStudy {
@@ -13,33 +11,29 @@ public class CheckedExceptionStudy {
         Controller controller = new Controller();
         try {
             controller.controllerCall();
-        } catch (MyException e) {
-            e.printStackTrace();
+        } catch (MyCheckedException e) {
+          log.info("exception", e);
         }
     }
 
-    public static class MyException extends IOException {
-        public MyException(String message) {
-            super(message);
-        }
-    }
     static class Controller{
         Service service = new Service();
 
-        void controllerCall() throws MyException {
+        void controllerCall() throws MyCheckedException {
             service.serviceCall();
         }
     }
 
     static class Service{
         Repository repository = new Repository();
-        void serviceCall() throws MyException {
+        void serviceCall() throws MyCheckedException {
             repository.helloException();
         }
     }
+
     static class Repository{
-        void helloException() throws MyException {
-            throw new MyException("exception");
+        void helloException() throws MyCheckedException {
+            throw new MyCheckedException("exception");
         }
     }
 }
